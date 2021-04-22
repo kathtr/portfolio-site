@@ -8,19 +8,25 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <!--favicon-->
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-  <link rel="manifest" href="./site.webmanifest">
-  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+  <!--page scaling-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
-  <header>
+<body id="home">
+  <header class="banner" id="header">
     <div class="container">
-      <a href="#">Katharina Treptow</a>
+      <a href="index.html">Katharina Treptow</a>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -32,7 +38,7 @@
   </header>
 
   <main>
-    <section class="introduction">
+    <section class="introduction" id="hero">
       <div class="container">
         <h1>Hi there, I’m Katharina.</h1>
         <p>A UI/UX designer with a passion for crafting meaningful design solutions and seamless user experiences.</p>
@@ -53,7 +59,7 @@
           <div class="column">
             <h3>ReFit</h3>
             <p>A remote fitness app. Become Fit Wherever.</p>
-            <a href="refit.html">Read more</a>
+            <a href="refit.html" class="button">Read more</a>
           </div>
         </div>
 
@@ -68,7 +74,7 @@
           <div class="column">
             <h3>Cloud Savings</h3>
             <p>Saving money for everyone.</p>
-            <a href="#">Read more</a>
+            <a href="#" class="button">Read more</a>
           </div>
         </div>
       </div>
@@ -80,7 +86,7 @@
     <div class="container">
       <h2>Get in Touch</h2>
       <p>Shoot me a message when you are interested in my work, I'd happy to connect with you.</p>
-      <a href="mailto:katharina.d.treptow@gmail.com">Email me</a>
+      <a href="mailto:katharina.d.treptow@gmail.com" class="button contact">Email me</a>
 
       <div class="container">
         <a href="LINKEDIN-URL">

@@ -1,4 +1,108 @@
+/*
+Colors used:
+Primary color (white): ##AB7DD9;
+Secondary color (black): #8240C4;
+Accent color (purple): #AB7DD9
+
+Typography
+Headings: Source Sans Pro - Headings
+Supheadings: Martel Sans - Sub Headings
+Body: Oxygen - Body
+*/
 
 body {
-  background-color: lightgrey;
+background-color: #ffffff;
+font-family: 'Oxygen', sans-serif;
+font-size: 16px;
+font-weight: 300;
+line-height: 1.6;
+color: #111111;
+}
+
+h1, h2, h3, h4 {
+line-height: 1.4;
+}
+h1 {
+font-size: 2em;
+font-weight: 700;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2 {
+font-size: 1.75em;
+font-weight: 700;
+font-family: 'Martel Sans', sans-serif;
+}
+
+h3 {
+font-size: 1.5em;
+font-weight: 400;
+font-family: 'Martel Sans', sans-serif;
+}
+h4 {
+font-size: 1.25em;
+font-weight: 400;
+font-family: 'Martel Sans', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #111111;
+  text-decoration: none;
+}
+a:hover {
+  color: #8240C4;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #8240C4;
+  text-decoration: underline;
+}
+
+
+
+.button { /*should stay on the bottom of css */
+  display: inline-block;
+  background-color: #AB7DD9;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #8240C4;
+  transition: 0.2s opacity;
+}
+.button:hover {
+  opacity: 0.8;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.button:active {
+opacity: 0.8;
+text-decoration: none;
+}
+
+.button.contact {
+  background-color: transparent;
+  color: #AB7DD9;
+  text-transform: uppercase;
+  border: 2px solid #8240C4;
+}
+
+.button.contact:hover {
+  background-color: #AB7DD9;
+  color: #ffffff;
+}
+
+.button.prototype {
+  border-radius: 50px;
+}
+
+.button.CV {
+border-radius: 50px;
 }

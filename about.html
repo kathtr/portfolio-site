@@ -8,19 +8,24 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <!--favicon-->
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-  <link rel="manifest" href="./site.webmanifest">
-  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+  <!--page scaling-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
-  <header>
+<body id="home">
+  <header class="banner" id="header">
     <div class="container">
-      <a href="#">Katharina Treptow</a>
+      <a href="index.html">Katharina Treptow</a>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -45,7 +50,7 @@
         <div class="row">
           <div class="column">
             <picture>
-              <source srcset="img/about/me.jpg" media="(max-width:767px)">
+              <source srcset="img/about/me@1x.jpg" media="(max-width:767px)">
               <img src="img/about/me@2x.jpg" alt="Katharina Treptow Portrait">
             </picture>
           </div>
@@ -59,7 +64,7 @@
               Since then, I’ve signed up to a bootcamp and worked on my portfolio.
               Additionally, I’m currently developing my skills in Front-End Development to complement my Design skills.</p>
             <p>I am looking forward to working in an innovative company culture where I can further grow my interpersonal and technical skills by helping achieve meaningful design goals.</p>
-            <a href="files/cv.pdf" target="_blank" download>Download my CV</a>
+            <a href="files/cv.pdf" class="button CV" target="_blank" download>Download my CV</a>
           </div>
         </div>
 
@@ -97,11 +102,11 @@
 
   </main>
 
-  <footer>
+  <footer id="contact">
     <div class="container">
       <h2>Get in Touch</h2>
       <p>Shoot me a message when you are interested in my work, I'd happy to connect with you.</p>
-      <a href="mailto:katharina.d.treptow@gmail.com">Email me</a>
+      <a href="mailto:katharina.d.treptow@gmail.com" class="button contact">Email me</a>
 
       <div class="container">
         <a href="LINKEDIN-URL">
