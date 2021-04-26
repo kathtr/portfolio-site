@@ -1,14 +1,18 @@
 /*
 Colors used:
-Primary color (white): ##AB7DD9;
-Secondary color (black): #8240C4;
-Accent color (purple): #AB7DD9
+Primary color (light purple): #AB7DD9;
+Secondary color (purple): #8240C4;
+Accent color (black): #111111
 
 Typography
 Headings: Source Sans Pro - Headings
 Supheadings: Martel Sans - Sub Headings
 Body: Oxygen - Body
 */
+
+header {
+
+}
 
 body {
 background-color: #ffffff;
@@ -46,40 +50,44 @@ font-family: 'Martel Sans', sans-serif;
 }
 
 img {
-  width: 100%;
+width: 100%;
 }
 
 a {
-  color: #111111;
-  text-decoration: none;
+color: #111111;
+text-decoration: none;
 }
-a:hover {
-  color: #8240C4;
-  text-decoration: underline;
+
+a:visited {
+color: #111111;
+text-decoration: underline;
 }
 
 a:hover,
 a:focus {
-  color: #8240C4;
-  text-decoration: underline;
+color: #8240C4;
+text-decoration: underline;
 }
 
-
+a:active {
+color: #8240C4;
+text-decoration: underline;
+}
 
 .button { /*should stay on the bottom of css */
-  display: inline-block;
-  background-color: #AB7DD9;
-  color: #ffffff;
-  font-weight: 400;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #8240C4;
-  transition: 0.2s opacity;
+display: inline-block;
+background-color: #AB7DD9;
+color: #ffffff;
+font-weight: 400;
+padding: 10px;
+border-radius: 3px;
+border-bottom: 2px solid #8240C4;
+transition: 0.2s opacity;
 }
 .button:hover {
-  opacity: 0.8;
-  color: #ffffff;
-  text-decoration: none;
+opacity: 0.8;
+color: #ffffff;
+text-decoration: none;
 }
 
 .button:active {
@@ -88,21 +96,21 @@ text-decoration: none;
 }
 
 .button.contact {
-  background-color: transparent;
-  color: #AB7DD9;
-  text-transform: uppercase;
-  border: 2px solid #8240C4;
+background-color: transparent;
+color: #AB7DD9;
+text-transform: uppercase;
+border: 2px solid #8240C4;
 }
 
 .button.contact:hover {
-  background-color: #AB7DD9;
-  color: #ffffff;
+background-color: #AB7DD9;
+color: #ffffff;
 }
 
-.button.prototype {
-  border-radius: 50px;
-}
-
-.button.CV {
+.button.external {
 border-radius: 50px;
+}
+
+.container {
+  max-width: 1200px;
 }
