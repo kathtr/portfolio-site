@@ -10,8 +10,8 @@ Supheadings: Martel Sans - Sub Headings
 Body: Oxygen - Body
 */
 
-header {
-
+* {
+box-sizing: border-box;
 }
 
 body {
@@ -112,11 +112,81 @@ color: #ffffff;
 border-radius: 50px;
 }
 
+/* Layout styling */
+
 .container {
 max-width: 1200px;
+}
+
+.container {
+padding: 0 15px;
+max-width: 1200px;
+}
+
+.row {
+margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+
+#work .row {
+padding-bottom: 25px; border-bottom: 1px solid #4a4a4a;
 }
 
 .logo {
 max-width: 250px;
 margin-top: 25px;
+}
+
+header {
+position: fixed;
+background-color: #111111;
+text-align: center;
+padding: 10px 0;
+display: inline-block;
+width: 100%;
+color: #ffffff
+}
+
+nav > ul {
+list-style-type: none;
+padding: 0;
+}
+
+nav > ul > li {
+display: inline-block;
+}
+
+nav > ul > li > a {
+padding: 0 15px;
+text-transform: uppercase;
+font-weight: 700;
+color: #ffffff;
+}
+
+nav > ul > li > a:visited {
+color: #ffffff;
+text-decoration: underline;
+}
+
+nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+nav > ul > li > a:visited {
+  text-decoration: underline;
+}
+
+#hero {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+main {
+  padding-top: 165px;
+}
+
+.social {
+width: 44px;
 }
