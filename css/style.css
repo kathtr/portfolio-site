@@ -85,6 +85,10 @@ border-bottom: 2px solid #8240C4;
 transition: 0.2s opacity;
 }
 
+.button:visited {
+color: #ffffff;
+}
+
 .button:hover {
 opacity: 0.8;
 color: #ffffff;
@@ -115,10 +119,6 @@ border-radius: 50px;
 /* Layout styling */
 
 .container {
-max-width: 1200px;
-}
-
-.container {
 padding: 0 15px;
 max-width: 1200px;
 }
@@ -133,15 +133,13 @@ padding-bottom: 25px; border-bottom: 1px solid #4a4a4a;
 
 .logo {
 max-width: 250px;
-margin-top: 25px;
 }
 
 header {
 position: fixed;
 background-color: #111111;
 text-align: center;
-padding: 10px 0;
-display: inline-block;
+padding: 35px 0 10px;
 width: 100%;
 color: #ffffff
 }
@@ -168,25 +166,46 @@ text-decoration: underline;
 }
 
 nav > ul > li > a:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 nav > ul > li > a:visited {
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 #hero {
-  background-color: #111111;
-  color: #ffffff;
-  padding: 20px 0;
-  display: inline-block;
-  width: 100%;
+background-color: #111111;
+color: #ffffff;
+padding: 20px 0;
+display: inline-block;
+width: 100%;
 }
 
 main {
-  padding-top: 165px;
+padding-top: 171px;
 }
 
-.social {
+footer {
+background-color: #111111;
+padding: 10px 0;
+text-align: center;
+color: #ffffff
+}
+
+.tools {
+  max-width: 64px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.button.contact {
+margin-bottom: 24px;
+}
+
+.social svg {
 width: 44px;
+margin-left: 8px;
+margin-right: 8px;
 }
