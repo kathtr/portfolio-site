@@ -70,13 +70,22 @@ text-decoration: underline;
 
 a:hover,
 a:focus {
-color: #8240C4;
 text-decoration: underline;
 }
 
 a:active {
 color: #8240C4;
 text-decoration: underline;
+}
+
+.social a {
+  color: #ffffff;
+  width: 20%;
+}
+
+.social a svg {
+  fill: currentColor;
+  height: auto !important;
 }
 
 .button { /*should stay on the bottom of css */
@@ -120,6 +129,36 @@ color: #ffffff;
 
 .button.external {
 border-radius: 50px;
+}
+
+.container.picture {
+  padding: 0;
+}
+
+.container.picture h2 {
+  padding-left: 15px;
+}
+
+.intro {
+  top: 150px;
+  left: 0;
+  width: 100%;
+}
+
+.prototyping .col-md-6 {
+  display: inline-block;
+  width: 50px;
+  margin-right: 16px;
+}
+
+.prototyping a {
+  background: transparent;
+  border: none;
+}
+
+.prototyping svg {
+  width: 50px;
+  height: auto;
 }
 
 /*Animation */
@@ -219,7 +258,9 @@ display: inline-block;
 }
 
 nav > ul > li > a {
-padding: 0 15px;
+position: relative;
+width: 30%;
+padding: 8px 15px;
 text-transform: uppercase;
 font-weight: 700;
 color: #ffffff;
@@ -230,12 +271,38 @@ color: #ffffff;
 text-decoration: underline;
 }
 
+
 nav > ul > li > a:hover {
-text-decoration: underline;
+text-decoration: none;
 }
 
-nav > ul > li > a:visited {
-text-decoration: underline;
+ul.borderXwidth a:before, ul.borderXwidth a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+ul.borderXwidth a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+ul.borderXwidth a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+ul.borderXwidth a:hover:before, ul.borderXwidth a:hover:after
+{
+    opacity: 1;
+    width: 100%;
 }
 
 #hero {
@@ -310,12 +377,22 @@ clear: both;
 display: table;
 }
 
+.my-story .row .col-md-6, .work,
+.projects .row .col-md-6.col-lg-7 {
+  padding-left: 0;
+}
+
 #home h2 { margin-top: 24px;}
 
 .my-story .row:first-of-type .col-md-6 {
 float: left;
 width: 50%;
-margin-right: 16px;
+margin-right: 15px;
+}
+
+.intro {
+  position: absolute;
+  top: 50vh;
 }
 
 }
@@ -325,10 +402,22 @@ Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
 
+
 .container {
 max-width: 1200px;
 margin-left: auto;
 margin-right: auto;
+}
+
+.container.picture {
+  max-width: auto;
+}
+
+.container.picture h2 {
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+  padding-left: 25px;
+
 }
 
 /* ==============================
