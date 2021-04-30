@@ -83,6 +83,7 @@ padding: 10px;
 border-radius: 3px;
 border-bottom: 2px solid #8240C4;
 transition: 0.2s opacity;
+transition: 0.2s opacity;
 }
 
 .button:visited {
@@ -115,6 +116,65 @@ color: #ffffff;
 .button.external {
 border-radius: 50px;
 }
+
+/*Animation */
+
+@keyframes color-change {
+from {fill: #edc655;}
+to {fill: #f76414;}
+}
+
+.sun {
+  animation: 2s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+from {transform: translate(0,50px);}
+to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+animation: 20s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+div.borderXwidth a:before, div.borderXwidth a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+div.borderXwidth a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+div.borderXwidth a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
+
 
 /* Layout styling */
 
@@ -193,11 +253,11 @@ color: #ffffff
 }
 
 .tools {
-  max-width: 64px;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+max-width: 64px;
+margin-left: 8px;
+margin-right: 8px;
+margin-top: 8px;
+margin-bottom: 8px;
 }
 
 .button.contact {
@@ -208,4 +268,66 @@ margin-bottom: 24px;
 width: 44px;
 margin-left: 8px;
 margin-right: 8px;
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+
+header {
+text-align: unset;
+padding: 20px 0 13px;
+}
+
+nav {
+width: auto;
+float: right;
+margin-top: 4px;
+}
+
+main {
+padding-top: 102px;
+}
+
+.col-md-6 {
+width: 50%;
+}
+
+[class*="col-"] {
+float: left;
+padding-left: 10px;
+}
+
+.row::after {
+content: "";
+clear: both;
+display: table;
+}
+
+#home h2 { margin-top: 24px;}
+
+.my-story .row:first-of-type .col-md-6 {
+float: left;
+width: 50%;
+margin-right: 16px;
+}
+
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+
+.container {
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
 }
