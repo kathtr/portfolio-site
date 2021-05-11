@@ -22,18 +22,23 @@
 </head>
 
 <body id="project">
-  <header class="banner" id="header">
+  <header>
     <div class="container">
-      <a href="index.html">
-        <img src="img/logo.png" alt="Logo" class="logo">
-      </a>
-      <nav>
-        <ul class="borderXwidth">
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="navtoggle" id="myNavtoggle">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo" class="logo">
+
+        </a>
+        <nav>
+          <ul class="borderXwidth">
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+            <li><a href="javascript:void(0);" id="myNavtoggle" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+          </ul>
+
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -46,7 +51,7 @@
           <img src="img/refit/refit@2x.jpg" alt="Refit App Mockup">
         </picture>
             </div>
-        <div class="content">
+        <div class="content container">
           <h1>Refit</h1>
           <p>Become fit wherever.</p>
         </div>
@@ -95,28 +100,26 @@
       <div class="container picture">
         <div class="row">
           <h2>Competitor Analysis</h2>
-          <picture>
-            <source srcset="img/refit/competitor_analysis@1x.png" media="(max-width:767px)">
-            <img src="img/refit/competitor_analysis@2x.png" alt="Competitor Analysis Table">
-          </picture>
-        </div>
+      </div>
+      <picture>
+        <source srcset="img/refit/competitor_analysis@1x.png" media="(max-width:767px)">
+          <img src="img/refit/competitor_analysis@2x.png" alt="Competitor Analysis Table">
+      </picture>
       </div>
     </section>
 
     <section class="user_flow">
-      <div class="container">
+      <div class="container picture">
         <div class="row">
           <div class="col-md-6 col-lg-7">
             <h2>User Flow</h2>
             <p>Next on, I began to sketch out the user flow for the 3 functionalities that this case study is focusing on: Purchasing a subscription plan, track the workout progress and watch a workout video.</p>
           </div>
-          <div class="col-md-6 col-lg-5">
-            <picture>
-              <source srcset="img/refit/user_flow@1x.png" media="(max-width:767px)">
-              <img src="img/refit/user_flow@2x.png" alt="User Flow">
-            </picture>
-          </div>
         </div>
+        <picture>
+          <source srcset="img/refit/user_flow@1x.png" media="(max-width:767px)">
+          <img src="img/refit/user_flow@2x.png" alt="User Flow">
+        </picture>
       </div>
     </section>
 
@@ -124,37 +127,39 @@
       <div class="container picture">
         <div class="row">
           <h2>Sketches</h2>
-          <picture>
-            <source srcset="img/refit/sketches@1x.jpg" media="(max-width:767px)">
-            <img src="img/refit/sketches@2x.jpg" alt="Sketches">
-          </picture>
         </div>
+        <picture>
+          <source srcset="img/refit/sketches@1x.jpg" media="(max-width:767px)">
+          <img src="img/refit/sketches@2x.jpg" alt="Sketches">
+        </picture>
       </div>
     </section>
 
     <section class="wireframes">
-      <div class="container">
+      <div class="container picture">
         <div class="row">
           <h2>Wireframes</h2>
           <div class="col-md-6 col-lg-7">
             <p>Once I sketched out the first screens, I started to bring the corresponding mid-fidelity wireframes into life. To complete the user stories, I have created additional screens such as a “Loading” screen. As requested for this case
               study, I oriented myself towards the Human Interface and Material Design Guidelines.</p>
+          </div>
+          <div class="col-md-6 col-lg-5">
             <p>From the competitor analysis, I understood how I want to present the screens and what I need to consider to improve the design flow.
               I wanted to shorten the onboarding screens and give users the ability to track their fitness progress in one single view.</p>
           </div>
-          <div class="col-md-6 col-lg-5">
-            <picture>
-              <source srcset="img/refit/wireframes@1x.jpg" media="(max-width:767px)">
-              <img src="img/refit/wireframes@2x.png" alt="Wireframes">
-            </picture>
-          </div>
         </div>
+        <picture>
+          <source srcset="img/refit/wireframes@1x.jpg" media="(max-width:767px)">
+          <img src="img/refit/wireframes@2x.png" alt="Wireframes">
+        </picture>
       </div>
     </section>
 
     <section class="style_guide">
       <div class="container picture">
-        <h2>Style Guide</h2>
+        <div class="row">
+          <h2>Style Guide</h2>
+        </div>
         <picture>
           <source srcset="img/refit/style_guide@1x.png" media="(max-width:767px)">
           <img src="img/refit/style_guide@2x.png" alt="Style Guide">
@@ -203,12 +208,12 @@
       <div class="container picture">
         <div class="row">
           <h2>Final Design</h2>
-          <picture>
-            <source srcset="img/refit/mockups@1x.jpg" media="(max-width:767px)">
-            <img src="img/refit/mockups@2x.jpg" alt="Mockups">
-          </picture>
         </div>
       </div>
+      <picture>
+          <source srcset="img/refit/mockups@1x.jpg" media="(max-width:767px)">
+          <img src="img/refit/mockups@2x.jpg" alt="Mockups">
+      </picture>
     </section>
 
     <section class="takeaways">
@@ -250,6 +255,9 @@
 
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <script src="https://kit.fontawesome.com/968dfcd3a5.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

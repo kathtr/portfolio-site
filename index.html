@@ -20,22 +20,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body id="home">
   <header>
     <div class="container">
-      <a href="index.html">
-        <img src="img/logo.png" alt="Logo" class="logo">
-      </a>
-      <nav>
-        <ul class="borderXwidth">
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="navtoggle" id="myNavtoggle">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo" class="logo">
+
+        </a>
+        <nav>
+          <ul class="borderXwidth">
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+            <li><a href="javascript:void(0);" id="myNavtoggle" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+          </ul>
+
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -1051,7 +1055,7 @@
             </p>
             Skills used:
             <ul>
-              <li>CSS Animation/li>
+              <li>CSS Animation</li>
               <li>CSS Transform</li>
             </ul>
           </div>
@@ -1092,7 +1096,9 @@
     </div>
   </footer>
 
-  <script src="./js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <script src="https://kit.fontawesome.com/968dfcd3a5.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

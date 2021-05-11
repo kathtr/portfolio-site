@@ -226,6 +226,7 @@ font-size: 80%;
 margin-top: 24px;
 }
 
+
 /* Layout styling */
 
 .container {
@@ -248,13 +249,12 @@ border-bottom: none;
 }
 
 .logo {
-max-width: 250px;
+max-width: 150px;
 }
 
 header {
 position: fixed;
 background-color: #111111;
-text-align: center;
 padding: 35px 0 10px;
 width: 100%;
 color: #ffffff
@@ -263,10 +263,7 @@ color: #ffffff
 nav > ul {
 list-style-type: none;
 padding: 0;
-}
-
-nav > ul > li {
-display: inline-block;
+margin: 0;
 }
 
 nav > ul > li > a {
@@ -288,7 +285,44 @@ nav > ul > li > a:hover {
 text-decoration: none;
 }
 
-ul.borderXwidth a:before, ul.borderXwidth a:after
+.navtoggle li:not(:last-child) {
+display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+position: relative;
+}
+
+.navtoggle li .icon {
+position: absolute;
+right: 0;
+top: 2px;
+font-size: 20px;
+padding-right: 0;
+}
+
+.navtoggle.responsive li {
+display: block;
+text-align: right;
+}
+
+.navtoggle.responsive li a {
+  padding-right: 0;
+}
+
+.navtoggle.responsive nav {
+  padding: 10px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
+ul.borderXwidth a:before, ul.borderXwidth a:not(.icon):after
 {
 position: absolute;
 opacity: 0;
@@ -299,35 +333,40 @@ background: #FFF;
 transition: all 0.3s;
 }
 
-ul.borderXwidth a:before
+ul.borderXwidth a:not(.icon):before
 {
 left: 0px;
 top: 0px;
 }
 
-ul.borderXwidth a:after
+ul.borderXwidth a:not(.icon):after
 {
 right: 0px;
 bottom: 0px;
 }
 
-ul.borderXwidth a:hover:before, ul.borderXwidth a:hover:after
+ul.borderXwidth a:not(.icon):hover:before, ul.borderXwidth a:not(.icon):hover:after
 {
 opacity: 1;
 width: 100%;
 }
 
+.icon {
+padding: 0;
+width: 20px;
+}
+
 #hero {
 background-color: #111111;
 color: #ffffff;
-padding: 150px 0;
+padding: 10px 0;
 text-align: center;
 }
 
-#project p {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+#project .row {
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
 }
 
 #project p:first-child{
@@ -335,12 +374,11 @@ margin-bottom: 80px;
 }
 
 #project h2 {
-margin-top: 80px;
 margin-left: auto;
 }
 
 main {
-padding-top: 171px;
+padding-top: 89px;
 }
 
 footer {
@@ -375,6 +413,22 @@ Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
 
+nav > ul {
+margin: 1em 0;
+}
+
+nav > ul > li {
+display: inline-block;
+}
+
+.navtoggle li:not(:last-child) {
+display: inline-block;
+}
+
+.navtoggle li:last-child {
+display: none;
+}
+
 .project .container {
 position: relative;
 }
@@ -389,7 +443,7 @@ font-size: 150%;
 
 header {
 text-align: unset;
-padding: 20px 0 13px;
+padding: 10px 0 4px;
 }
 
 nav {
@@ -399,7 +453,7 @@ margin-top: 4px;
 }
 
 main {
-padding-top: 102px;
+padding-top: 83px;
 }
 
 .col-md-6 {
@@ -408,7 +462,10 @@ width: 50%;
 
 [class*="col-"] {
 float: left;
-padding-left: 24px;
+}
+
+[class*="col-"]:not(:first-of-type) {
+  padding-left: 24px;
 }
 
 .row::after {
@@ -420,6 +477,10 @@ display: table;
 .my-story .row .col-md-6, .work,
 .projects .row .col-md-6.col-lg-7 {
 padding-left: 0;
+}
+
+#hero {
+padding: 150px 0;
 }
 
 #home h2 {
@@ -439,13 +500,19 @@ position: absolute;
 top: 50vh;
 }
 
-
+#project h2 {
+margin-top: 80px;
+margin-left: auto;
+}
 
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
 
+.logo {
+min-width: 250px
+}
 
 .container {
 max-width: 1200px;
@@ -460,10 +527,9 @@ max-width: auto;
 .container.picture h2 {
 max-width: 1200px;
 margin: 0 auto 20px auto;
-padding-left: 25px;
+padding-left: 0;
 
 
-}
 
 /* ==============================
 X-large devices (1440px or larger)
