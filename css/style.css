@@ -137,7 +137,8 @@ border-radius: 50px;
 padding: 0;
 }
 
-.container.picture h2 {
+.container.picture h2,
+.container.picture p {
 padding-left: 15px;
 }
 
